@@ -15,7 +15,11 @@ const formatTime = (date: Date): string => {
 
 const Reloj: React.FC = () => {
     const [now, setNow] = useState<Date>(new Date());
-    const [instants, setInstants] = useState<Instant[]>([]);
+
+    const [instants, setInstants] = useState<Instant[]>(() => {
+        const saved = localStorage.getItem('instants');
+        return saved ? (JSON.parse(saved) as Instant[]) : [];
+    });
 
     useEffect(() => {
         const interval = setInterval(() => {
@@ -30,7 +34,12 @@ const Reloj: React.FC = () => {
             id: Date.now(),
             time: formatTime(now),
         };
-        setInstants((prev) => [newInstant, ...prev]);
+
+        setInstants((prev) => {
+            const updated = [newInstant, ...prev];
+            localStorage.setItem('instants', JSON.stringify(updated));
+            return updated;
+        });
     };
 
     return (
