@@ -1,6 +1,10 @@
 import React from 'react';
 
-const Header: React.FC = () => {
+interface HeaderProps {
+    title: string;
+}
+
+const Header: React.FC<HeaderProps> = ({ title }) => {
     return (
         <div className="header">
             <div className="menuIcon">
@@ -8,8 +12,12 @@ const Header: React.FC = () => {
                 <div className="dashBottom"></div>
                 <div className="circle"></div>
             </div>
-            <h1>Registro de Tareas</h1>
-            <input type="text" className="searchInput" placeholder="Buscar ..." />
+            <h2>{title}</h2>
+            <input
+                type="text"
+                className="searchInput"
+                placeholder="Buscar ..."
+            />
             <div className="fa fa-search searchIcon"></div>
         </div>
     );
