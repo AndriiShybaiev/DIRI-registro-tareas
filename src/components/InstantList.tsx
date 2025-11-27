@@ -7,9 +7,10 @@ interface Instant {
 
 interface InstantListProps {
     instants: Instant[];
+    onDelete: (id: number) => void;
 }
 
-const InstantList: React.FC<InstantListProps> = ({ instants }) => {
+const InstantList: React.FC<InstantListProps> = ({ instants, onDelete }) => {
     if (instants.length === 0) {
         return <p>No hay instantes guardados.</p>;
     }
@@ -19,7 +20,10 @@ const InstantList: React.FC<InstantListProps> = ({ instants }) => {
             <h3>Instantes guardados</h3>
             <ul>
                 {instants.map((instant) => (
-                    <li key={instant.id}>{instant.time}</li>
+                    <li key={instant.id}>
+                        {instant.time}
+                        <button onClick={() => onDelete(instant.id)}>Eliminar</button>
+                    </li>
                 ))}
             </ul>
         </div>

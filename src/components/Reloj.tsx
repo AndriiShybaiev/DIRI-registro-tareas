@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import InstantList from "./InstantList.tsx";
+import InstantList from './InstantList';
 
 interface Instant {
     id: number;
@@ -42,6 +42,14 @@ const Reloj: React.FC = () => {
         });
     };
 
+    const handleDeleteInstant = (id: number) => {
+        setInstants((prev) => {
+            const updated = prev.filter((instant) => instant.id !== id);
+            localStorage.setItem('instants', JSON.stringify(updated));
+            return updated;
+        });
+    };
+
     return (
         <div className="clock-container">
             <h2>Reloj</h2>
@@ -51,7 +59,7 @@ const Reloj: React.FC = () => {
                 Guardar instante actual
             </button>
 
-            <InstantList instants={instants} />
+            <InstantList instants={instants} onDelete={handleDeleteInstant} />
         </div>
     );
 };
