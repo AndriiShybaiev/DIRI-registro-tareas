@@ -1,0 +1,64 @@
+.header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1.5rem;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+}
+
+.menuIcon {
+    position: relative;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+}
+
+.dashTop,
+.dashBottom {
+    width: 20px;
+    height: 2px;
+    background: white;
+    position: absolute;
+    left: 5px;
+}
+
+.dashTop {
+    top: 8px;
+}
+
+.dashBottom {
+    bottom: 8px;
+}
+
+.circle {
+    width: 6px;
+    height: 6px;
+    background: white;
+    border-radius: 50%;
+    position: absolute;
+    right: 5px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.header h2 {
+    flex: 1;
+    font-size: 1.5rem;
+    color: white;
+    margin: 0;
+}
+
+.searchInput {
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 20px;
+    outline: none;
+    width: 250px;
+    font-size: 0.9rem;
+}
+
+.searchIcon {
+    font-size: 1.2rem;
+    cursor: pointer;
+}

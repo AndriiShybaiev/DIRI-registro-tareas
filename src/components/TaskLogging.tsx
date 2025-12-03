@@ -1,4 +1,5 @@
 import React from 'react';
+import './TaskLogging.css';
 import Section from './Section';
 import ActivityList from './ActivityList';
 import { activities } from './data';

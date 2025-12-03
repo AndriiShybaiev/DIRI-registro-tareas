@@ -1,5 +1,6 @@
 import React, {type ReactNode } from 'react';
 import Header from './Header';
+import './Section.css';
 
 interface SectionProps {
     title: string;

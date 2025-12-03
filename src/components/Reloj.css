@@ -1,0 +1,79 @@
+.clock-container {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    padding: 2rem;
+    border-radius: 8px;
+    color: white;
+    text-align: center;
+}
+
+.clock-container h2 {
+    color: white;
+    margin-bottom: 1rem;
+}
+
+.clock-time {
+    font-size: 3rem;
+    font-weight: bold;
+    margin: 1.5rem 0;
+    font-family: 'Courier New', monospace;
+    letter-spacing: 0.1em;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.clock-container button {
+    background: white;
+    color: #667eea;
+    font-weight: bold;
+    margin-top: 1rem;
+}
+
+.clock-container button:hover {
+    background: #f0f0f0;
+}
+
+.instant-list {
+    margin-top: 2rem;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 1.5rem;
+    border-radius: 8px;
+    backdrop-filter: blur(10px);
+}
+
+.instant-list h3 {
+    color: white;
+    margin-bottom: 1rem;
+}
+
+.instant-list ul {
+    list-style: none;
+    padding: 0;
+}
+
+.instant-list li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.8rem;
+    margin-bottom: 0.5rem;
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 4px;
+    font-family: 'Courier New', monospace;
+    font-size: 1.1rem;
+}
+
+.instant-list li button {
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+    padding: 0.4rem 0.8rem;
+    font-size: 0.8rem;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.instant-list li button:hover {
+    background: rgba(255, 255, 255, 0.3);
+}
+
+.instant-list p {
+    color: rgba(255, 255, 255, 0.7);
+    font-style: italic;
+}

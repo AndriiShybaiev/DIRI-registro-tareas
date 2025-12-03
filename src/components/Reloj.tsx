@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import './Reloj.css';
 import InstantList from './InstantList';
 
 interface Instant {

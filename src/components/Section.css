@@ -1,0 +1,17 @@
+.section {
+    margin-bottom: 2rem;
+}
+
+.content {
+    padding: 1.5rem;
+    position: relative;
+}
+
+.line {
+    position: absolute;
+    left: 50px;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: #e0e0e0;
+}

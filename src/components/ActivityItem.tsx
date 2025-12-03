@@ -1,5 +1,6 @@
 import React from 'react';
 import type {Activity} from './types';
+import './ActivityItem.css';
 
 type ActivityItemProps = Activity;
 
